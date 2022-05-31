@@ -1,0 +1,62 @@
+---
+title: "Keep your Class Presentations Updated Painlessly with RMarkdown"
+subtitle: "IT Professionals Conference<br/>2022"
+author: "Erwin Lares"
+institute: "Office of Research Cyberinfrastructure"
+date: "2022/05/15 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    css: [default, default, middlebury-fonts]
+    lib_dir: libs
+    seal: true
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      countdown: 60000
+---
+
+```{r setup, include=FALSE, echo = FALSE, message=FALSE, warning=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.retina = 3,
+                      fig.width = 7,
+                      fig.height = 5, 
+                      echo = FALSE, 
+                      message = FALSE, 
+                      warning = FALSE, 
+                      include = TRUE)
+
+library(tidyverse)
+library(skimr)
+library(knitr)
+library(xaringan)
+library(googledrive)
+library(pagedown)
+
+```
+#### Keep your Class Presentations Updated with RMarkdown 
+### IT Professional Conference 2022
+
+## Overview
+
+Blah Blah Blah 
+
+---
+
+
+ 
+ 
+
+```{r upload-slides-to-goggle-drive, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, eval=FALSE}
+
+#build_pdf("spanish327_slides.html", complex_slides = TRUE)
+# If you want to build a new slide for each increment on incremental slides, set partial_slides = TRUE.
+#this method work, but plots will not render 
+#Docker HAS TO BE RUNNING FOR THIS TO WORK <- I DON'T THINK THIS IS TRUE!
+
+pagedown::chrome_print("itproconf.html", output = "itproconf.pdf")
+slides <- drive_put("itproconf.pdf", path = "itproconf/slides.pdf")
+slides <- slides %>%
+   drive_share(role = "reader", type = "anyone")
+
+```
