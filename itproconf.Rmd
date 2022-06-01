@@ -41,6 +41,27 @@ library(pagedown)
 Blah Blah Blah 
 
 ---
+#### Keep your Class Presentations Updated with RMarkdown 
+### IT Professional Conference 2022
+
+## 
+
+You can download Xaringan from CRAN 
+
+`install.packages('xaringan')`
+
+or from GitHub
+
+`devtools::install_github('xaringan')`
+
+---
+` One slide.`
+
+`---`
+
+`Another slide.`
+
+
 
 
  
