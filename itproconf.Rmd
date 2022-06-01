@@ -27,7 +27,6 @@ knitr::opts_chunk$set(fig.retina = 3,
                       include = TRUE)
 
 library(tidyverse)
-library(skimr)
 library(knitr)
 library(xaringan)
 library(googledrive)
