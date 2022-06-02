@@ -278,7 +278,7 @@ t_names |> head() |> kable(format = "html")
 
 [Bookdown Chapter 7](https://bookdown.org/yihui/rmarkdown/xaringan.html)
 
-Themes --> ```names(xaringan:::list_css())```
+Themes --> ```names(xaringan::list_css())```
 
 ---
 name:canvas
